@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mechanical Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loading Animation -->
+  <div class="loader-container" id="loaderContainer">
+    <div class="loader"></div>
+    <div class="loader-text">Loading...</div>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="developer-info">
+      <span></></span> Developed by Sithum 
+      <a href="https://github.com/jsu622jejej" target="_blank">
+        <div class="github-icon-container">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="github-icon">
+        </div>
+      </a>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  </div>
+
+  <!-- Calculator -->
+  <div class="calculator">
+    <div class="display" id="display">
+      <span id="current-value">0</span>
+      <span id="operator" class="operator"></span>
+    </div>
+    <div class="buttons">
+      <button class="button" onclick="clearDisplay()">C</button>
+      <button class="button" onclick="backspace()">⌫</button>
+      <button class="button operator" onclick="appendOperator('/')">÷</button>
+      <button class="button operator" onclick="appendOperator('*')">×</button>
+      <button class="button" onclick="appendNumber('7')">7</button>
+      <button class="button" onclick="appendNumber('8')">8</button>
+      <button class="button" onclick="appendNumber('9')">9</button>
+      <button class="button operator" onclick="appendOperator('-')">−</button>
+      <button class="button" onclick="appendNumber('4')">4</button>
+      <button class="button" onclick="appendNumber('5')">5</button>
+      <button class="button" onclick="appendNumber('6')">6</button>
+      <button class="button operator" onclick="appendOperator('+')">+</button>
+      <button class="button" onclick="appendNumber('1')">1</button>
+      <button class="button" onclick="appendNumber('2')">2</button>
+      <button class="button" onclick="appendNumber('3')">3</button>
+      <button class="button" onclick="calculateResult()" style="grid-row: span 2;">=</button>
+      <button class="button" onclick="appendNumber('0')" style="grid-column: span 2;">0</button>
+      <button class="button" onclick="appendNumber('.')">.</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
